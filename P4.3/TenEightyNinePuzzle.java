@@ -49,7 +49,7 @@ public class TenEightyNinePuzzle {
     	int reversed2 = reverse(difference);
     	int sum = difference + reversed2;
     	
-//    	System.out.println("Input was: "+input);
+    	System.out.println("Input was: "+input);
     	System.out.println(reversed1);
     	System.out.println("Expected: 173");
     	System.out.println(difference);
