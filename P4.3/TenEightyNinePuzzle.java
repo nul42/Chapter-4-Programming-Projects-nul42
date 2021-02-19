@@ -23,13 +23,16 @@ public class TenEightyNinePuzzle {
      * @return the reverse of the last 3 digits of n
      */
     static int reverse(int n) {
-//    	n = n % 1000;
+    	String returning_ = "";
+    	for(int i = (n+"").length() - 1; i > 0; i--){
+    		returning_ += (n+"").charAt(i);
+    	}
     	
-    	char first = (n+"").charAt(0);
-    	char second = (n+"").charAt(1);
-    	char third = (n+"").charAt(2);
+//    	char first = (n+"").charAt(0);
+//    	char second = (n+"").charAt(1);
+//    	char third = (n+"").charAt(2);
 //		System.out.println(third+second+first);//I believe it was grabbing the character numerical values and adding them.
-		return Integer.valueOf(third+""+second+""+first);
+		return Integer.valueOf(returning_);
     }
 
     /**
@@ -43,14 +46,13 @@ public class TenEightyNinePuzzle {
         scanner.close();
     	
 //    	input = 3282371;
-    	input = Math.abs(input % 1000);
+    	input = Math.abs(Integer.valueOf((input+"").substring((input+"").length()-3)));
     	int reversed1 = reverse(input);
     	int difference = Math.abs(input - reversed1);
     	int reversed2 = reverse(difference);
     	int sum = difference + reversed2;
     	
-    	System.out.println("Input was: "+input);
-	System.out.println("Expected assumes your input was 371");
+		System.out.println("Expected assumes your input was 371");
     	System.out.println(reversed1);
     	System.out.println("Expected: 173");
     	System.out.println(difference);
@@ -61,4 +63,3 @@ public class TenEightyNinePuzzle {
     	System.out.println("Expected: 1089");
     }
 }
-
