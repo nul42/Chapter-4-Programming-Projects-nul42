@@ -24,7 +24,7 @@ public class TenEightyNinePuzzle {
      */
     static int reverse(int n) {
     	String returning_ = "";
-    	for(int i = (n+"").length() - 1; i > 0; i--){
+    	for(int i = (n+"").length() - 1; i >= 0; i--){
     		returning_ += (n+"").charAt(i);
     	}
     	
