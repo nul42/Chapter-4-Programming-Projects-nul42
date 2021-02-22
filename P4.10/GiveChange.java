@@ -14,7 +14,7 @@ public class GiveChange {
    public static void main(String[] args) {
 	   long dollars = 0, returnTotal = 0;
 	   int quarters = 0, dimes = 0, nickels = 0, pennies = 0;
-	   System.out.print("");
+	   System.out.print("Please enter an ammount in dollars: ");
 	   Scanner scanner = new Scanner(System.in);
        returnTotal = (long) (scanner.nextDouble()*100);//I don't think that this will be working with billions of dollars but might as well.
        scanner.close();
